@@ -1,19 +1,23 @@
 //package Ejercicio2;
 package test;
-import java.util.ArrayList;
 public class Auto {
 	String modelo;
 	int precio;
-	//Asiento asientos[];
-	ArrayList<Asiento> asientos = new ArrayList<Asiento>(); 
+	Asiento asientos[];
+	 
 	String marca;
 	Motor motor;
 	int registro;
 	static int cantidadCreados;
 
 	int cantidadAsientos() {
-		return asientos.size();
-		
+		int cantidad;
+		for (int i=0;i<asientos.length;i++) {
+			if(asientos[i] instanceof Asiento) {
+				cantidad++;
+			}
+		}
+		return cantidad;
 	}
 	String verificarIntegridad() {
 		
